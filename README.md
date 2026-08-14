@@ -4,8 +4,6 @@
 
 A full end-to-end research prototype for autonomous power grid risk detection and mitigation, built on the [L2RPN WCCI 2020](https://l2rpn.chalearn.org/) benchmark — the standard competition environment for learned power grid control. The system spans temporal deep learning, ensemble ML, retrieval-augmented generation, LLM-ranked decision making, and physics-verified action execution.
 
-👉 [Click here for the Antigravity Notebook Index](INDEX.md)
-
 ---
 
 ## Table of Contents
