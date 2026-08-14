@@ -2,7 +2,7 @@
 
 > **800:1 class imbalance. 19x performance lift. One agent defending a live power grid.**
 
-A full end-to-end research prototype for autonomous power grid risk detection and mitigation, built on the [L2RPN WCCI 2020](https://l2rpn.chalearn.org/) benchmark — the standard competition environment for learned power grid control. The system spans temporal deep learning, ensemble ML, retrieval-augmented generation, LLM-ranked decision making, and physics-verified action execution.
+A full end-to-end research prototype for autonomous power grid risk detection and mitigation, built on the [L2RPN WCCI 2020](https://l2rpn.chalearn.org/) benchmark — the standard competition environment for learned power grid control. The system spans temporal deep learning, ensemble ML, retrieval-augmented generation, LLM-ranked decision making, and physics-verified action execution. 
 
 ---
 
@@ -40,9 +40,10 @@ Power grids operate under strict physical constraints. A single line overload ca
 4. **Verify** those actions in a physics-faithful simulator **before** committing them to the live grid
 5. **Execute** verified interventions in a closed-loop fashion, continuing to monitor afterward
 
-The system is built around two core beliefs: ML alone should never be the last line of defense in a safety-critical system, and temporal context is irreplaceable for distinguishing genuine stress trajectories from momentary noise.
+The system is built around two core beliefs: ML alone should never be the last line of defense in a safety-critical system, and temporal context is irreplaceable for distinguishing genuine stress trajectories from momentary noise. 
 
-<sub>Note that while this agent achieves a robust 19x performance lift over statistical baselines, real-world power grids are infinitely complex, nonlinear environments. This repository is not intended to be a fully-certified deployment for a NERC control room. Rather, it serves as an advanced architectural proof-of-concept and research study. It was built to demonstrate that pairing sequence models (Mamba) with calibrated discrete logic (XGBoost) and a deterministic isolation sandbox can safely navigate the extreme class imbalances inherent to safety-critical infrastructure.</sub>
+*Note that while this agent achieves a robust 19x performance lift over statistical baselines, real-world power grids are infinitely complex, nonlinear environments. This repository is not intended to be a fully-certified deployment for a NERC control room. Rather, it serves as an advanced architectural proof-of-concept and research study. It was built to demonstrate that pairing sequence models (Mamba) with calibrated discrete logic (XGBoost) and a deterministic isolation sandbox can safely navigate the extreme class imbalances inherent to safety-critical infrastructure.*
+
 ---
 
 ## High-Level Architecture
