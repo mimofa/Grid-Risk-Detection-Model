@@ -299,7 +299,7 @@ This concatenation is deliberate: the Mamba embedding encodes the **temporal tra
 
 ### Manual Classifier Chain
 
-Rather than using sklearn's built-in `ClassifierChain`, a manual chain is implemented for finer control over calibration:
+Rather than using sklearn's built-in `ClassifierChain`, a manual chain is implemented for finer control over calibration (full implementation can be found in the Agentic Grid Model.ipynb file):
 
 ```python
 for i in range(n_targets):  # 119 targets
