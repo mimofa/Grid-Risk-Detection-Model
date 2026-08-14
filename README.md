@@ -165,7 +165,7 @@ rho (59) + v_or (59) + v_ex (59) + p_or (59) + q_or (59)
 
 ## Phase 1 — Data Collection & Feature Engineering
 
-**Notebook:** `THE_Grid.ipynb`
+**Notebook:** `Grid Model Training.ipynb`
 
 ### Collection Process
 
@@ -216,7 +216,7 @@ This corresponds to up to **800:1 negative-to-positive ratio** for blackout even
 
 ## Phase 2 — Mamba Temporal Encoder Training
 
-**Notebook:** `THE_Grid.ipynb`
+**Notebook:** `Grid Model Training.ipynb`
 
 ### Model Architecture: `GridRiskMamba` (TF-Hybrid)
 
@@ -285,7 +285,7 @@ The high accuracy (99.89%) reflects the dominant negative class — the model pr
 
 ## Phase 3 — XGBoost Classifier Chain
 
-**Notebook:** `THE_Grid.ipynb` (Phase 2), `Agentic_Grid.ipynb` (inference)
+**Notebook:** `Grid Model Training.ipynb` (Phase 2), `Agentic Grid Model.ipynb` (inference)
 
 ### Embedding Extraction
 
@@ -340,7 +340,7 @@ The stateless baseline uses the same XGBoost chain architecture but replaces the
 
 ## Phase 4 — Agentic Copilot Pipeline
 
-**Notebook:** `Agentic_Grid.ipynb`
+**Notebook:** `Agentic Grid Model.ipynb`
 
 The `ProductionCopilot` class orchestrates the full agentic loop. It holds the live Grid2Op environment, the loaded Mamba model, the XGBoost chain, the FAISS vector store, and the LLM client as persistent state.
 
