@@ -551,7 +551,7 @@ pip install google-genai
 pip install matplotlib networkx
 ```
 
-**Hardware:** Training was performed on an A100 GPU (Google Colab). Inference runs on any CUDA-capable GPU.
+**Hardware:** Training was performed on an A100 GPU (RunPod). Inference runs on any CUDA-capable GPU.
 
 **Environment variables required:**
 ```bash
