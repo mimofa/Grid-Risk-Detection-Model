@@ -42,6 +42,7 @@ Power grids operate under strict physical constraints. A single line overload ca
 
 The system is built around two core beliefs: ML alone should never be the last line of defense in a safety-critical system, and temporal context is irreplaceable for distinguishing genuine stress trajectories from momentary noise.
 
+Note that while this agent achieves a robust 19x performance lift over statistical baselines, real-world power grids are infinitely complex, nonlinear environments. This repository is not intended to be a fully-certified deployment for a NERC control room. Rather, it serves as an advanced architectural proof-of-concept and research study. It was built to demonstrate that pairing sequence models (Mamba) with calibrated discrete logic (XGBoost) and a deterministic isolation sandbox can safely navigate the extreme class imbalances inherent to safety-critical infrastructure.
 ---
 
 ## High-Level Architecture
