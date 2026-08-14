@@ -1,6 +1,6 @@
 # ⚡ Autonomous Power Grid Defense Agent
 
-> **800:1 class imbalance. 19x performance lift. One agent defending a live power grid.**
+> **0.01% blackout frequency. 19x performance lift. One agent defending a live power grid.**
 
 A full end-to-end research prototype for autonomous power grid risk detection and mitigation, built on the [L2RPN WCCI 2020](https://l2rpn.chalearn.org/) benchmark — the standard competition environment for learned power grid control. The system spans temporal deep learning, ensemble ML, retrieval-augmented generation, LLM-ranked decision making, and physics-verified action execution. 
 
@@ -204,7 +204,7 @@ The dataset is extremely imbalanced — a direct reflection of real grid operati
 | Voltage sag | ~2.88% |
 | System blackout | ~0.01% |
 
-This corresponds to up to **800:1 negative-to-positive ratio** for blackout events. This imbalance is handled during training via `pos_weight` (capped at 10x to prevent gradient explosion) and evaluated using **Average Precision** rather than AUROC, since AUROC is misleadingly optimistic on heavily skewed datasets.
+This corresponds to up to **10000:1 negative-to-positive ratio** for blackout events. This imbalance is handled during training via `pos_weight` (capped at 10x to prevent gradient explosion) and evaluated using **Average Precision** rather than AUROC, since AUROC is misleadingly optimistic on heavily skewed datasets.
 
 ### Dataset Scale
 
