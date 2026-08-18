@@ -297,6 +297,8 @@ X = [mamba_embedding (128-dim) ‖ tabular_features (26-dim)] = 154-dim
 
 This concatenation is deliberate: the Mamba embedding encodes the **temporal trajectory** of the grid (what has been happening over the past 128 steps), while the tabular features encode the **point-in-time physics** (what the grid looks like right now). Both signals are complementary and neither alone is sufficient.
 
+Critically, Mamba was trained with a 4-step prediction horizon — meaning its embeddings are specifically shaped to carry signal about near-future grid stress, not just the current state. By the time XGBoost receives the embedding, it is not classifying the present moment — it is classifying a temporal summary that already encodes leading indicators of what the grid will look like 4 steps ahead. This makes the full pipeline a genuine **early warning system**: the agent responds to a trajectory leading toward a crisis, not to a crisis that has already materialized.
+
 ### Manual Classifier Chain
 
 Rather than using sklearn's built-in `ClassifierChain`, a manual chain is implemented for finer control over calibration (full implementation can be found in the Agentic Grid Model.ipynb file):
