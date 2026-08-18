@@ -558,7 +558,12 @@ export URL_CHRONICS="your_google_drive_url"
 - **Post-mitigation cooldown is fixed at 10 steps.** Production deployment would require tuning this to the grid's physical settling time, which varies by network topology and the type of intervention applied.
 - **LLM quota exhaustion.** Gemini API rate limits will terminate LLM-ranked action selection after sustained agent activity. The agent falls back to the do-nothing safe default when LLM calls fail.
 - **Single chronic evaluation.** The autonomous loop demo runs on whichever chronic the environment loads at reset. Results may vary across chronics with different demand profiles.
-
+**With greater resources, the system would benefit from:**
+- A larger and more balanced training dataset with higher positive event frequency, achieved through more diverse chronics or targeted simulation of stress          scenarios, directly improving XGBoost classification performance on rare events
+- A richer NERC and grid operations knowledge base in the RAG layer — more protocols, regional grid codes, and operator runbooks would ground LLM decisions more     precisely in domain-specific regulatory requirements
+- A physics-informed action space grounded in real grid topology rules — current heuristic candidates are generic; a real deployment would constrain candidates to   actions permissible under the specific network's operational limits and switching protocols
+- A production LLM with no quota constraints and lower latency, or a self-hosted domain-fine-tuned model trained on grid operator decision logs
+- Multi-step sandbox rollout for deeper lookahead before action commitment, requiring full chronic state management beyond the current 1-step simulation
 ---
 
 *Built and evaluated on the L2RPN WCCI 2020 benchmark — the standard competition environment for learned power grid control.*
