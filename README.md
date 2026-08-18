@@ -5,6 +5,13 @@
 A full end-to-end research prototype for autonomous power grid risk detection and mitigation, built on the [L2RPN WCCI 2020](https://l2rpn.chalearn.org/) benchmark — the standard competition environment for learned power grid control. The system spans temporal deep learning, ensemble ML, retrieval-augmented generation, LLM-ranked decision making, and physics-verified action execution. 
 
 ---
+## About
+
+I'm Mayez Fakhreddine — a third-year electrical engineering student with a focus on applied deep learning and agentic systems. I built this project to explore what it takes to deploy ML responsibly in a safety-critical domain.
+
+For questions, feedback, or collaboration:
+[LinkedIn](https://www.linkedin.com/in/mayez-fakhreddine-058a69285/) · [GitHub](https://github.com/mimofa)
+---
 
 ## Table of Contents
 
