@@ -475,6 +475,8 @@ The **failure history accumulation** is a key design feature: failed sandbox pro
 
 **Inference normalization must match training.** The per-window z-score normalization applied in `GridRiskDataset.__getitem__` during training must be identically replicated in `detect_risk` at inference. Omitting this step causes Mamba to receive values 50-100x outside its trained input distribution, making all outputs meaningless regardless of model quality.
 
+**Data collection assumes a do-nothing control policy.** All chronics were stepped with no corrective actions, meaning the model learned from a grid evolving under zero intervention. A real deployment would operate on a grid under active control, introducing a training-inference distribution shift that would require retraining on operator-controlled trajectories.
+
 **Assumptions:**
 - The simulation operates under a do-nothing baseline action (no topology changes between interventions), which means the observed risk reflects natural grid evolution plus any agent interventions.
 - Generator redispatch is the primary corrective lever; topology changes (bus switching) are not in the current action space beyond line open/close.
