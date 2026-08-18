@@ -10,7 +10,6 @@ A full end-to-end research prototype for autonomous power grid risk detection an
 
 - [Project Goals](#project-goals)
 - [High-Level Architecture](#high-level-architecture)
-- [Repository Structure](#repository-structure)
 - [Environment & Grid](#environment--grid)
 - [Phase 1 — Data Collection & Feature Engineering](#phase-1--data-collection--feature-engineering)
 - [Phase 2 — Mamba Temporal Encoder Training](#phase-2--mamba-temporal-encoder-training)
@@ -112,28 +111,6 @@ The system is built around two core beliefs: ML alone should never be the last l
 │  7. Log mitigated state into Mamba buffer (no amnesia)              │
 │  8. Repeat up to 3 attempts with failure history fed back to LLM    │
 └─────────────────────────────────────────────────────────────────────┘
-```
-
----
-
-## Repository Structure
-
-```
-├── THE_Grid.ipynb          # Phase 1-3: Data collection, Mamba training, XGBoost training
-├── Agentic_Grid.ipynb      # Phase 4: Agentic Copilot, visualizations, SHAP analysis
-├── grid_models/
-│   ├── best_model.pt       # Saved TF-Mamba weights (best val AP checkpoint)
-│   ├── meta.json           # Grid topology metadata and feature slice indices
-│   ├── X_train.npy         # Mamba embeddings + tab features (train)
-│   ├── X_test.npy          # Mamba embeddings + tab features (test)
-│   ├── y_train.npy         # Binary labels (train)
-│   └── y_test.npy          # Binary labels (test)
-├── faiss_grid_index/       # FAISS vector store of NERC protocol documents
-├── assets/
-│   ├── agent_behavior_trace.png
-│   ├── grid_heatmap_final.png
-│   └── shap_xgb.png
-└── README.md
 ```
 
 ---
