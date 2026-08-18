@@ -558,6 +558,7 @@ export URL_CHRONICS="your_google_drive_url"
 - **Post-mitigation cooldown is fixed at 10 steps.** Production deployment would require tuning this to the grid's physical settling time, which varies by network topology and the type of intervention applied.
 - **LLM quota exhaustion.** Gemini API rate limits will terminate LLM-ranked action selection after sustained agent activity. The agent falls back to the do-nothing safe default when LLM calls fail.
 - **Single chronic evaluation.** The autonomous loop demo runs on whichever chronic the environment loads at reset. Results may vary across chronics with different demand profiles.
+
 **With greater resources, the system would benefit from:**
 - A larger and more balanced training dataset with higher positive event frequency, achieved through more diverse chronics or targeted simulation of stress          scenarios, directly improving XGBoost classification performance on rare events
 - A richer NERC and grid operations knowledge base in the RAG layer — more protocols, regional grid codes, and operator runbooks would ground LLM decisions more     precisely in domain-specific regulatory requirements
