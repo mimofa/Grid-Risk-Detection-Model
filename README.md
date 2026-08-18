@@ -11,6 +11,7 @@ I'm Mayez Fakhreddine — a third-year electrical engineering student with a foc
 
 For questions, feedback, or collaboration:
 [LinkedIn](https://www.linkedin.com/in/mayez-fakhreddine-058a69285/) · [GitHub](https://github.com/mimofa)
+
 ---
 
 ## Table of Contents
